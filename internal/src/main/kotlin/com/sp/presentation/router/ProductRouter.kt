@@ -17,7 +17,8 @@ class ProductRouter(
     fun routeProduct(): RouterFunction<ServerResponse> {
         return coRouter {
             (accept(MediaType.APPLICATION_JSON) and "/internal/product").nest {
-                GET("/{productNo}", productHandler::getProduct)
+                GET("", productHandler::getProduct)
+                GET("/{productNo}", productHandler::getProducts)
             }
         }
     }
