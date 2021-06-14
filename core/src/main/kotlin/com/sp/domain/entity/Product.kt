@@ -23,7 +23,7 @@ data class Product(
     val productName: String,
 
     @Column(name = "price")
-    val price: Long,
+    val price: Long?,
 
     @Type(type = GenericEnumType.NAME)
     @Column(name = "status_type")
